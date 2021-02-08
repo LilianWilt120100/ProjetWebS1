@@ -1,0 +1,168 @@
+
+body {
+  display : flex;
+  flex-direction : column;
+}
+
+header {
+  display : flex;
+  align-items : center;
+  height : 10em;
+  background-color : #474350;
+}
+
+footer {
+  background-color: #57545e;
+}
+
+footer > p {
+  width: 100%;
+  text-align: center;
+}
+
+header > h1 {
+  width : 100%;
+  color : #F0C808;
+  text-align : center;
+}
+
+nav > ul {
+  display : flex;
+  justify-content : space-around;
+  list-style-type : none;
+  padding : 1em 0 1em 0;
+  margin : 0;
+  background-color : #474350;
+}
+
+nav > ul > li {
+  background-color : #086788;
+  color : #F8FFF4;
+  padding : 0.5em;
+  border-radius : 5px;
+}
+
+nav > ul > #curr_tab {
+  cursor: not-allowed;
+}
+
+#curr_tab:hover {
+  background-color: #086788;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: #F8FFF4;
+}
+
+li:hover {
+  background-color : #4b90a8;
+}
+
+li:active {
+  background-color : #34829d;
+}
+
+div {
+  background-color : #68656f;
+}
+
+section {
+  padding : 50px;
+  margin : auto;
+  width : 80%;
+  background-color : #aba9af;
+}
+
+article {
+  display : flex;
+  flex-direction : row;
+  align-items : center;
+  min-height : 30em;
+}
+
+article:nth-child(2n) {
+  flex-direction : row-reverse;
+}
+
+article:nth-child(2n) > .details {
+  display: flex;
+  flex-direction : column;
+  align-items: flex-end;
+}
+
+.description_textuelle {
+  width : 50%;
+  margin-left : 0;
+}
+
+.description_visuelle {
+  width : 30%;
+
+}
+
+.description {
+  box-sizing: border-box;
+  flex-grow : 1;
+  background-color : inherit;
+  margin : 0 2em 0 2em;
+}
+
+.description_textuelle > h2 {
+  color: #086788;
+}
+
+.description_visuelle > img {
+  max-width : 100%;
+  height : auto;
+
+}
+
+.details {
+  width: 19%;
+  background-color: inherit;
+}
+
+.details > a > img {
+  width: 2em;
+  height: auto;
+}
+
+.details > h6 {
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 700px) {
+  header > h1 {
+    font-size : 4em;
+  }
+  nav > ul > li {
+    font-size : 1.5em;
+  }
+  article:nth-child(2n) > .description_textuelle {
+  text-align: right;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .description {
+    width : 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  article, article:nth-child(2n) {
+    flex-direction : column;
+    margin-top: 5em;
+  }
+
+  .description {
+    margin : 1em 0 0 0;
+    width : auto;
+    max-width : 80%;
+  }
+
+  article:nth-child(2n) > .details {
+    display: block;
+  }
+}
